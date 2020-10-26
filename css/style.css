@@ -1,0 +1,121 @@
+/* reset css */
+/* px => rem réf de la taille de la police*/
+/* 16px mult 62.5% = 1.000rem */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* standard 16px em % pt  800px 80.0rem*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+}
+h1,h2,h3,p{ /* contexte d'éléménts */
+    margin: 0;
+    font-weight: 400;/* option pour la police en gras*/
+}
+*{
+    box-sizing: border-box;
+}
+/* à ajouter */
+
+/* theme */
+
+/* 
+    hexadécimal : palette indexée  à 255;
+    rgb : palette couleur systeme 24bit;
+    rgba : palette couleur systeme 64bit;
+    
+    Red
+    Green
+    Blue
+    Alpha
+
+    (255, 0, 0, 0.8)
+
+*/
+:root{ /* pseudo-class : variables couleur; */
+        --default-color: #ccc;
+        --primary-color: rgba(41, 128, 185,1.0);
+        --success-color: rgba(39, 174, 96,1.0);
+        --alert-color: rgba(192, 57, 43,1.0);
+}
+
+
+header{
+    background-color: #222;
+}
+header > h1{
+    color: #fff;
+    text-align: center;
+    line-height: 6.0rem;
+}
+main, footer{
+    max-width: 90rem; /* 900px + 30px = 930px*/
+    border: solid 0.1rem transparent;
+    margin: 2.0rem auto 0;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,0.5);
+}
+article h2{ /* css générale des h2 */
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    color: #fff;
+    line-height: 4.6rem;
+     border-radius: 1.2rem;
+}
+
+/* élément visuel non inserer en html */
+article h2::before, article:last-child h2::before, article:nth-of-type(2) h2{
+    content:"\2714";
+    margin-right: 0.5rem;
+    vertical-align: 0.1rem;
+}
+
+article:nth-of-type(2) h2{ /* choisir le deuxième article */
+     background-color: var(--success-color);
+
+}
+article:last-child h2{
+    background-color: var(--alert-color);
+}
+article:last-child h2::before{
+     content:"\2605";
+     color: #222;
+}
+article:nth-of-type(2) h2::before{
+    content:'\274c';
+    opacity: .5;
+}
+article p{
+    padding: 1.0rem 0;
+    line-height: 2.6rem;
+}
+article:last-child p{
+    padding-bottom: 0;
+}
+footer{
+    box-shadow: 0 0 0 transparent;
+    border: 0;
+}
+footer *{ /* tout ce qui contient le footer est centré*/
+    text-align: center;
+}
+
+/*
+Cascading
+Style
+Sheet
+
+Hyper
+Text
+MarkUp
+Language
+
+Uniform
+Resource
+Locator
+
+*/
