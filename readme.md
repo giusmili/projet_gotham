@@ -12,4 +12,4 @@ Présentation de l'univers de Gotham city. Personnages issues des DC
     git status
 
 ```
-[Voir la page GitHub](https://github.com/giusmili/projet_gotham/gotham.html "voir la page gitHub")
+[Voir la page GitHub]( https://giusmili.github.io/projet_gotham/gotham.html "voir la page gitHub")
